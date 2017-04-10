@@ -30,6 +30,11 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.login_in_button)
     private void submit() {
+        //把登录事件封装成了一个方法，直接调用就行了，代码看起来简洁而且容易理解
+        loginEvent();
+    }
+
+    private void loginEvent() {
         String username=user.getText().toString();
         String pass=password.getText().toString();
         if(username.isEmpty()||pass.isEmpty()){
